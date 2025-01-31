@@ -1,29 +1,36 @@
-import React from 'react'
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export const Userlist = () => {
+
+
+    const [users, setUsers] = useState([]);
+    const [name, setName] = useState("");
+    const [age, setAge] = useState("");
+    const [city, setCity] = useState("");
+
+
+    const fetchUsers = async () => {
+        const response = await axios.get("http://localhost:5000/users");
+        setUsers(response.data);
+        console.log(response.data);
+    };
+
+    useEffect(() => {
+        fetchUsers();
+    }, []);
     return (
         <>
             <div className="userlist">
 
                 <div className="userfilters flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 p-4">
                     <span className="text-lg font-semibold">Results</span>
-                    <span>
-                        <select
-                            name="filter"
-                            className="bg-transparent px-8 py-2 rounded-3xl border border-gray-300 focus:outline-none focus:border-blue-500"
-                            id="filter"
-                        >
-                            <option value="select">Select</option>
-                            <option value="BY name">BY name</option>
-                            <option value="BY role">BY role</option>
-                            <option value="BY id">BY id</option>
-                            <option value="BY alphabetically">BY alphabetically</option>
-                        </select>
-                    </span>
+                   
                 </div>
 
 
-                <div className="lists bg-white my-5 rounded-3xl p-3 w-full h-[45vh] ">
+                <div className="lists  my-5 rounded-3xl p-3 w-full h-[45vh] ">
                     <table className="w-full min-w-[600px]">
                         <thead>
                             <tr className="bg-gray-100">
@@ -32,14 +39,16 @@ export const Userlist = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="border-b border-gray-200">
-                                <td className="py-3 px-4">tony</td>
-                                <td className="py-3 px-4">Admin</td>
-                            </tr>
-                            <tr className="border-b border-gray-200">
-                                <td className="py-3 px-4">jack</td>
-                                <td className="py-3 px-4">Admin</td>
-                            </tr>
+
+                            {users.map((cureml, index) => (
+                                <tr key={index} className="border-b bg-white  border-dashed rounded-full border-gray-200 ">
+                                    <td className="py-3 px-4 "><img className="h-9 rounded-full inline m-3" src="./user.jpg" alt="" />{cureml.name}</td>
+                                    <td className="py-3 px-4">{cureml.role}</td>
+                                </tr>
+
+                            ))}
+
+
                         </tbody>
                     </table>
                 </div>

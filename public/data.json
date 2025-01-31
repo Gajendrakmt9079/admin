@@ -1,54 +1,12 @@
 {
-    "employees": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "role": "Software Engineer",
-        "department": "Engineering"
-      },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "role": "Product Manager",
-        "department": "Product Management"
-      },
-      {
-        "id": 3,
-        "name": "Alice Johnson",
-        "role": "Data Scientist",
-        "department": "Data Science"
-      },
-      {
-        "id": 4,
-        "name": "Bob Brown",
-        "role": "DevOps Engineer",
-        "department": "Engineering"
-      },
-      {
-        "id": 5,
-        "name": "Charlie Davis",
-        "role": "UX Designer",
-        "department": "Design"
-      },
-      {
-        "id": 6,
-        "name": "Eva Green",
-        "role": "QA Engineer",
-        "department": "Quality Assurance"
-      },
-      {
-        "id": 7,
-        "name": "Frank Wilson",
-        "role": "Technical Writer",
-        "department": "Documentation"
-      },
-      {
-        "id": 8,
-        "name": "Grace Lee",
-        "role": "HR Manager",
-        "department": "Human Resources"
-      }
-     
-    
-    ]
-  }
+  "employees": [
+    { "id": 1, "name": "John Doe", "role": "Software Engineer", "department": "Engineering" },
+    { "id": 2, "name": "Jane Smith", "role": "Product Manager", "department": "Product Management" },
+    { "id": 3, "name": "Alice Johnson", "role": "Data Scientist", "department": "Data Science" },
+    { "id": 4, "name": "Bob Brown", "role": "DevOps Engineer", "department": "Engineering" },
+    { "id": 5, "name": "Charlie Davis", "role": "UX Designer", "department": "Design" },
+    { "id": 6, "name": "Eva Green", "role": "QA Engineer", "department": "Quality Assurance" },
+    { "id": 7, "name": "Frank Wilson", "role": "Technical Writer", "department": "Documentation" },
+    { "id": 8, "name": "Grace Lee", "role": "HR Manager", "department": "Human Resources" }
+  ]
+}

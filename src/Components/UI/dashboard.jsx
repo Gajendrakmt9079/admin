@@ -8,6 +8,7 @@ import { Users } from '../pages/Users'
 import { Sign } from '../pages/Sign'
 import { Logs } from '../pages/Logs'
 import { Updateuser } from '../pages/updateuser'
+import { Userdetail } from '../pages/userdetail'
 
 
 export const Dashboard = () => {
@@ -44,6 +45,10 @@ export const Dashboard = () => {
                 {
                     path: "/users/user/update/:id",
                     element: <Updateuser />,
+                },
+                {
+                    path: "/users/user/detail/:id",
+                    element: < Userdetail/>,
                 },
 
             ],
